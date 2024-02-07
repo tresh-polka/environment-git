@@ -1,6 +1,5 @@
 const EmployeeDB = {
     employees: [],
-    total: 0,
 
     addEmployee(
         name, //Имя нового сотрудника
@@ -35,6 +34,11 @@ const EmployeeDB = {
             };
         };
         return this.employees
+    },
+
+    employeesReading() {
+        const employeesNames = this.employees.map((employee) => employee.name)
+        console.log(`Список сотрудников: ${employeesNames}`);
     }
 };
 
@@ -46,7 +50,11 @@ const provideEmployeeInformation = (arr) => {
 
 
 EmployeeDB.addEmployee('Иван Денисович', 'ДНД', 'Мастер')  
+EmployeeDB.employeesReading()  
 EmployeeDB.addEmployee('Олег Александрович', 'НГТУ им. Евстигнеева', 'Актёр-студент')  
 EmployeeDB.addEmployee('Николай Александрович', 'Какая-то Лондонская Королевская Академия Музыки и Драмы', 'Главный Кларнетист')  
+EmployeeDB.employeesReading()  
+EmployeeDB.removeEmployee('Иван Денисович')
+EmployeeDB.updateEmployee('Николай Александрович', 'Какой-то Лондонский Оркестр', 'Вообще Самый Главный Кларнетист')
 
 console.log(provideEmployeeInformation(EmployeeDB))

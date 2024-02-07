@@ -1,6 +1,5 @@
 const EmployeeDB = {
     employees: [],
-    total: 0,
 
     addEmployee(
         name, //Имя нового сотрудника
@@ -45,6 +44,3 @@ EmployeeDB.addEmployee('Николай Александрович', 'Какая-
 
 console.log(capitalizingNames(EmployeeDB.employees))
 console.log(lowerCasingDepartaments(EmployeeDB.employees))
-
-
-//Удаление и обновление реализованы в part-1.js
