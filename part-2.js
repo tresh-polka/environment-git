@@ -1,16 +1,4 @@
-const EmployeeDB = {
-    employees: [],
-
-    addEmployee(
-        name, //Имя нового сотрудника
-        departament, //Отдел
-        position //Должность
-    ) {
-        const employee = {name, departament, position};
-        this.employees.push(employee);
-        return this.employees
-    }
-};
+import { EmployeeDB } from "./BD.js"
 
 
 const provideEmployeeInformation = (arr) => {
@@ -37,10 +25,6 @@ const lowerCasingDepartaments = (arr) => {
     return employeesDepartaments
 }
 
-
-EmployeeDB.addEmployee('Иван Денисович', 'ДНД', 'Мастер')  
-EmployeeDB.addEmployee('Олег Александрович', 'НГТУ им. Евстигнеева', 'Актёр-студент')  
-EmployeeDB.addEmployee('Николай Александрович', 'Какая-то Лондонская Королевская Академия Музыки и Драмы', 'Главный Кларнетист')  
 
 console.log(capitalizingNames(EmployeeDB.employees))
 console.log(lowerCasingDepartaments(EmployeeDB.employees))

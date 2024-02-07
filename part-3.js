@@ -1,31 +1,4 @@
-const EmployeeDB = {
-    employees: [],
-
-    addEmployee(
-        name, //Имя нового сотрудника
-        departament, //Отдел
-        position //Должность
-    ) {
-        const employee = {name, departament, position};
-        this.employees.push(employee);
-        return this.employees
-    }
-};
-
-const oneMoreEmployeeDB = {
-    employees: [],
-
-    addEmployee(
-        name, //Имя нового сотрудника
-        departament, //Отдел
-        position //Должность
-    ) {
-        const employee = {name, departament, position};
-        this.employees.push(employee);
-        return this.employees
-    }
-};
-
+import {EmployeeDB, oneMoreEmployeeDB} from "./BD.js"
 
 const objectСloning = (obj) => {
     let clonedObject = Object.assign(obj)
@@ -58,10 +31,6 @@ EmployeeDB.addEmployee('Олег Александрович', 'НГТУ им. Е
 EmployeeDB.addEmployee('Николай Александрович', 'Какая-то Лондонская Королевская Академия Музыки и Драмы', 'Главный Кларнетист')  
 EmployeeDB.addEmployee('Сева', 'НГТУ им. Евстигнеева', 'Гениальный актёр-студент')  
 
-oneMoreEmployeeDB.addEmployee('Елена Алексеевна', 'Психологический театр-студия "Синий Краб"', 'Режиссёр')  
-oneMoreEmployeeDB.addEmployee('Полина Андреевна', 'Магазин, вредящий вашему здоровью', 'Лучший в мире консультант')  
-oneMoreEmployeeDB.addEmployee('Анечка Павловна', 'Отсутствие точки отсчета', 'Летающая девочка')  
-oneMoreEmployeeDB.addEmployee('Александра Илларионовна', 'Психологический театр-студия "Синий Краб"', 'Сбежала')  
 
 console.log(objectСloning(EmployeeDB))
 console.log(mergingDBs(EmployeeDB, oneMoreEmployeeDB))
